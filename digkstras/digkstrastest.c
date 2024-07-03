@@ -7,7 +7,7 @@ int main(){
     struct  Node* nodes[numofnodes]; //array to store the nodes to pass them to init
 
     //create some node 
-    struct Node asebe;
+    struct  Node asebe;
     struct  Node addis;
     struct  Node adama;
     struct  Node awash;
@@ -21,6 +21,7 @@ int main(){
     mojo.name = 'M';
 
     //add the nodes to the array and pass to init
+    //first in this array must be the startingNode
     nodes[0] = &asebe;
     nodes[1] = &adama;
     nodes[2] = &awash;
@@ -35,9 +36,9 @@ int main(){
     asebe.dist[0] = 260; asebe.dist[1] = 190; mojo.dist[0] = 10; adama.dist[0] = 50; adama.dist[1] = 65;
 
     //find shortest path. this doesnt return anything but sets the destination node's 
-    //mydist value as to the shortest distance from the startingNode 
+    //mydist value to the shortest distance from the startingNode 
     shortest(&asebe, &addis);
-    printf("%d  ", addis.mydist);
+    printf("%d  ", addis.mydist); //print the shortest ditance of destination node
     return 0;
 }
 
